@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     get 'people' => 'agenda#all'
     get 'single' => 'agenda#single'
     get 'new' => 'agenda#new'
+    get 'show' => 'agenda#show'
     
   end
 
