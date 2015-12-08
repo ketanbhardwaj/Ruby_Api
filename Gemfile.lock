@@ -38,6 +38,10 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    acts_as_api (0.4.2)
+      activemodel (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      rack (>= 1.1.0)
     arel (6.0.3)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
@@ -139,6 +143,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers
+  acts_as_api
   byebug
   coffee-rails (~> 4.1.0)
   jquery-rails
