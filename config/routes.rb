@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     get 'single' => 'agenda#single'
     # get 'new' => 'agenda#new'
     get 'users' => 'users#show'
+    get 'users/:id' => 'users#show'
     post 'new' => 'users#new'
     get 'orders' => 'orders#show'
     

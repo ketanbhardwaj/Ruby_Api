@@ -12,7 +12,7 @@
 # Person.create(name: 'Vinay', phone: '245646445634')
 # Person.create(name: 'New', phone: '1231231')
 
-t1 = User.create(name: "Ketan", email: "ketan268", gender: "Male", phone: 123)
+t1 = User.create(name: "Ketan", email: "ketan268", gender: "Male", phone: 123, username: "ketan268", password: "pass")
 Order.create(price: "444", user_id: t1.id)
 Order.create(price: "555", user_id: t1.id)
 Order.create(price: "666", user_id: t1.id)

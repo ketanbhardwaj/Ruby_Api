@@ -22,6 +22,8 @@ class User < ActiveRecord::Base
     template.add :email
     template.add :gender
     template.add :phone
+    template.add :username
+    template.add :password
   end
   
 end
