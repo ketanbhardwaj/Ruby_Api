@@ -11,8 +11,9 @@ Rails.application.routes.draw do
   namespace :api,constraints: {format: :json},defaults: { format: 'json' } do
     get 'people' => 'agenda#all'
     get 'single' => 'agenda#single'
-    get 'new' => 'agenda#new'
+    # get 'new' => 'agenda#new'
     get 'users' => 'users#show'
+    post 'new' => 'users#new'
     get 'orders' => 'orders#show'
     
   end

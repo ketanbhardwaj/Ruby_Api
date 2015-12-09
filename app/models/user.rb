@@ -12,4 +12,13 @@ class User < ActiveRecord::Base
     template.add :phone
     template.add :order
   end
+  
+  api_accessible :profile do |template|
+    template.add :id
+    template.add :name
+    template.add :email
+    template.add :gender
+    template.add :phone
+  end
+  
 end
