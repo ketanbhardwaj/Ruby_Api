@@ -16,6 +16,8 @@ Rails.application.routes.draw do
     get 'users/:id' => 'users#show'
     post 'new' => 'users#new'
     get 'orders' => 'orders#show'
+    get 'deal' => 'deal#show'
+    get 'dealorder' => 'deal_order#show'
     
   end
 
