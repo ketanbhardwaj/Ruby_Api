@@ -1,3 +1,1 @@
-# Ruby_Api
-# Ruby_Api
-# Ruby_Api
+# JSON API using Ruby on Rails
