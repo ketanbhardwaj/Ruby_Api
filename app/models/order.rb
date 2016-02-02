@@ -8,6 +8,9 @@ class Order < ActiveRecord::Base
   api_accessible :public do |template|
     template.add :id
     template.add :price
+    template.add :user_id
+    template.add :created_at
+    template.add :updated_at
   end
   
 end

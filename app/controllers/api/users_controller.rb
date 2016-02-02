@@ -17,10 +17,7 @@ module Api
       begin
         @companies = User.includes(:order).find(params[:id])
         respond_to do |format|
-          # format.xml  { render_for_api :name_only, :xml  => @user }
-          # format.json { render_for_api :public, :json => @users, :root => :users }
           format.json { render_for_api :public, json: @companies, :root => :users }
-          
         end
         
       rescue ActiveRecord::RecordNotFound

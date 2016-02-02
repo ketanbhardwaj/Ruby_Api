@@ -26,5 +26,31 @@ module Api
       
     end
     
+    def new 
+      @no = JSON.parse(GlobalConstants::PARAMETER_MISSING)
+      # @chak = User.new(user_params)
+      # if @chak.save
+        # render json: User.all
+      # else
+        # render json: Order.all
+      # end
+      
+      begin
+        @new_user = Deal.create(deal_name: params.require(:deal_name), deal_price: params.require(:deal_price), deal_location: params.require(:deal_location))
+        
+        respond_to do |format|
+          format.json { render_for_api :public, json: @new_user, :root => :deal }
+        end
+        
+      rescue ActionController::ParameterMissing
+        render json: @no
+        # respond_to do |format|
+          # format.json { render_for_api :all, json: @no, :root => :failure }
+        # end
+      end
+      
+    end
+    
+    
   end
 end

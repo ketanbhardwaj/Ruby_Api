@@ -4,11 +4,16 @@ module Api
     respond_to :json
     
     def show
-      render json: Order.all
-      # respond_to do |format|
-        # format.json { render json: Order.all}
-      # end
+      @no = JSON.parse(GlobalConstants::INVALID_PARAMETER)
+      begin
+        @companies = Order.all
+        respond_to do |format|
+          format.json { render_for_api :public, json: @companies, :root => :orders }
+        end
+        
+      rescue ActiveRecord::RecordNotFound
+        render json: @no
+      end
     end
-    
   end
 end
