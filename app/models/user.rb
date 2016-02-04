@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
     template.add :id
     template.add :name
     template.add :email
+    template.add :password
     template.add :gender
     template.add :phone
     template.add :order

@@ -44,12 +44,27 @@ module Api
         
       rescue ActionController::ParameterMissing
         render json: @no
+       rescue ActiveRecord::RecordNotUnique
+         render json: JSON.parse(GlobalConstants::RECORD_NOT_UNIQUE)
         # respond_to do |format|
           # format.json { render_for_api :all, json: @no, :root => :failure }
         # end
       end
       
     end
+    
+    # def login
+      # @no = JSON.parse(GlobalConstants::INVALID_PARAMETER)
+      # begin
+        # @login = User.find(params[:email][:password])
+        # # @companies = User.includes(:order).find(params[:id])
+        # # respond_to do |format|
+          # # format.json { render_for_api :public, json: @companies, :root => :users }
+        # # end  
+      # rescue ActiveRecord::RecordNotFound
+        # render json: @no
+      # end
+    # end
     
     private
     def user_params
